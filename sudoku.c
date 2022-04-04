@@ -31,6 +31,7 @@ void solve(const char *s)
 
 int main(void)
 {
+    write_file("Hello World\n","test.txt");
     solve(    "5...7...."
         "6..195..."
         ".98....6."
