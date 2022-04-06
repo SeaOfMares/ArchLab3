@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 extern void *returnsp();
 
 int trycell(int *x, int pos)
@@ -9,8 +10,8 @@ int trycell(int *x, int pos)
 
     unsigned long sp;
     
-    sp = (unsigned long) returnsp();
-    printf("Entering trycell, Stack pointer register sp: %#8x\n",sp);
+   // sp = (unsigned long) returnsp();
+   // printf("Entering trycell, Stack pointer register sp: %#8x\n",sp);
 
 
     if (pos == 81) return 1;
@@ -32,7 +33,7 @@ int trycell(int *x, int pos)
         if (!(used & 1) && trycell(x, pos + 1)) return 1;
 
     x[pos] = 0;
-    sp = (unsigned long) returnsp();
-    printf("Entering trycell, Stack pointer register sp: %#8x\n",sp);
+   // sp = (unsigned long) returnsp();
+   // printf("Entering trycell, Stack pointer register sp: %#8x\n",sp);
     return 0;
 }
